@@ -1,11 +1,11 @@
 {
     "name": "mvp",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "",
     "main": "server.js",
     "scripts": {
         "build": "tsc",
-        "start": "node server.js",
+        "start": "node build/server.js",
         "dev": "nodemon server.ts"
     },
     "repository": {
