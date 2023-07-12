@@ -1,0 +1,13 @@
+"use strict";
+exports.__esModule = true;
+var express_1 = require("express");
+var userController_1 = require("../controllers/userController");
+var router = (0, express_1.Router)();
+router.route('/register').post(userController_1.addUser);
+router.route('/login').post(userController_1.loginUser);
+router.route('/forgotPassword').post(userController_1.forgotPassword);
+router.route("/resetPassword").patch(userController_1.resetPassword);
+router.route('/updatePassword').patch(userController_1.updatePassword);
+router.route('/updateUsername').patch(userController_1.updateUsername);
+router.route('/me').get(userController_1.getUserDataController);
+exports["default"] = router;

@@ -1,0 +1,13 @@
+"use strict";
+exports.__esModule = true;
+var express_1 = require("express");
+// import { createProfile, getMyProfile, updateProfile } from '../controllers/profileController';
+var profileController_1 = require("../controllers/profileController");
+var ceeveeItController_1 = require("../controllers/ceeveeItController");
+var router = (0, express_1.Router)();
+// import { createProfile, getMyProfile, updateProfile } from '../controllers/profileController';
+// router.route('/profile').post(createProfile).get(getMyProfile);
+router.route('/profile').put(profileController_1.updateProfile).get(profileController_1.getMyProfile);
+// router.route('/profile/:id').put(updateProfile).delete(deleteProfile);
+router.post('/profile/description', ceeveeItController_1.getDescription);
+exports["default"] = router;
